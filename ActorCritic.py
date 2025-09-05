@@ -60,7 +60,7 @@ class Actor(nn.Module):
                                                                                                 x, y,
                                                                                                 item_selected_r)
 
-                plot = [x, y, z, item_selected_r]
+                plot = torch.cat((x.unsqueeze(1), y.unsqueeze(1), z.unsqueeze(1), item_selected_r), dim=1)
                 out = [new_state_bin, new_state_item, new_state_packed_item, io_prob, io, p_prob, p, plot]
                 return out, None
             else:
@@ -83,7 +83,7 @@ class Actor(nn.Module):
                                                                                             state_packed_item, i, o,
                                                                                             x, y,
                                                                                             item_selected_r)
-                plot = [x, y, z, item_selected_r]
+                plot = torch.cat((x.unsqueeze(1), y.unsqueeze(1), z.unsqueeze(1), item_selected_r), dim=1)
                 out = [new_state_bin, new_state_item, new_state_packed_item, i_prob, i, o_prob, o, p_prob, p, plot]
                 return out, None
 
