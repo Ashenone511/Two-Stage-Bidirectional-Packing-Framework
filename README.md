@@ -15,11 +15,11 @@ lf our work is helpful for your research, please cite our paper:
   journal={IEEE Transactions on Automation Science and Engineering}, 
   title={A Learning-Based Two-Stage Bidirectional Packing Framework for 3D Packing Problems}, 
   year={2025},
-  volume={},
+  volume={22},
   number={},
-  pages={1-1},
-  month={},
+  pages={21541-21551},
   doi={10.1109/TASE.2025.3607410}}
+
 ```
 
 ## Requirements
