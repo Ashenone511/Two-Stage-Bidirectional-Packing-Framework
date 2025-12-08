@@ -1,9 +1,15 @@
-# A Learning-Based Two-Stage Bidirectional Packing Framework for 3D Packing Problems
+# Two-Stage Bidirectional Packing Framework
 
-The increasing demands of modern logistics have driven the need for the development of efficient packing methods capable of addressing the 3D Packing Problem (3D-PP). While Deep Reinforcement Learning (DRL) has emerged as a promising solution, the conventional three-stage scheme used in existing DRL-based methods still faces challenges, particularly in coordinating the behaviors of its constituent sub-networks and managing the large action space for item placement on instances involving large-sized bins. This work proposes a two-stage scheme to integrate item index and orientation selections into a single sub-stage, thereby simplifying behavioral coordination. To mitigate the issue of excessive memory usage associated with the selection integration, a Set Transformer with Induced Set Attention Block (ISAB) is employed to encode the rotated item state, thus keeping relatively light computation. Additionally, we propose a bidirectional packing method that compresses the placement action space while encouraging the agent to explore reasonable placement positions.
+This repository contains the TS-BP framework code for solving three-dimensional packing problems. This framework combines a two-stage scheme with a bidirectional packing method to enhance space utilization in large-container packing problems.
 
-<img src="https://github.com/Ashenone511/Two-Stage-Bidirectional-Packing-Framework/blob/main/fig/TS-BP.png" width=700>
+## Requirements
 
+This code is ran on a machine with Python version 3.8.0 and PyTorch 2.4.0.
+
+## Usage
+Run `main.py` to train the TS-BP framework. If you wish to change the item quantity and container sizes, modify the `nof_item`, `L`, and `W` values in `config.py`. 
+
+If you wish to modify container sizes other than 100×100, 200×200, and 400×200, you must also modify the convolutional network in `Net.py`.
 
 ## Paper
 Our paper, **A Learning-Based Two-Stage Bidirectional Packing Framework for 3D Packing Problems**, is accepted at *IEEE Transactions on Automation Science and Engineering*.
@@ -22,11 +28,6 @@ lf our work is helpful for your research, please cite our paper:
 
 ```
 
-## Requirements
-Python 3.7+ <br>
-Pytorch 1.12+
 
-## Training
-Run `main.py` to train the TS-BP framework.
 
 
